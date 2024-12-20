@@ -1,7 +1,10 @@
 import express from "express";
+import "dotenv/config";
 
 const app = express();
 
-app.listen(5173, () => {
-  console.log("Hello from Pramis");
+const PORT = process.env.PORT;
+
+app.listen(PORT, () => {
+  console.log(`backend running on port ${PORT}`);
 });
