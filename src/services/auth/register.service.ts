@@ -28,15 +28,6 @@ export async function loginUserService(data: {
     },
   });
 
-  console.log(
-    {
-      name: data.name,
-      email: data.email,
-      pasword: data.password,
-    },
-    "This is what goes to database"
-  );
-
   return {
     id: newUser.id,
     name: newUser.name,
