@@ -1,15 +1,14 @@
 import express from "express";
 import "dotenv/config";
-import router from "./routes/user.routes";
+import mainRouter from "./routes/main.routes";
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(mainRouter);
 
 const PORT = process.env.PORT;
-
-app.use(router);
 
 app.listen(PORT, () => {
   console.log(`backend running on port ${PORT}`);
