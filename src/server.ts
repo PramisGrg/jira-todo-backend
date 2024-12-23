@@ -1,6 +1,7 @@
 import express from "express";
 import "dotenv/config";
 import mainRouter from "./routes/main.routes";
+import jwt from "jsonwebtoken";
 
 const app = express();
 

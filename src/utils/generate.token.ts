@@ -1,9 +1,9 @@
 import jwt from "jsonwebtoken";
 
 const generateWebToken = (
-  payload: { name: string; email: string },
+  payload: { name: string; email: string; password: string },
   duration?: string
-): string | false => {
+) => {
   try {
     const token = jwt.sign(
       payload,
@@ -13,8 +13,7 @@ const generateWebToken = (
       }
     );
     return token;
-  } catch (error) {
-    console.log("error");
+  } catch {
     return false;
   }
 };

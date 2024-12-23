@@ -26,9 +26,10 @@ export async function userLoginService(data: {
   const responseData = {
     name: existingUser.name,
     email: existingUser.email,
+    password: existingUser.password,
   };
 
-  const token = generateWebToken(existingUser.password, "15d");
+  const token = generateWebToken(responseData, "15d");
 
   return { responseData, token };
 }
