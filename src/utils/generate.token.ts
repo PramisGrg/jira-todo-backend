@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 
 const generateWebToken = (
-  payload: { name: string; email: string; password: string },
+  payload: { id: string; name: string; email: string },
   duration?: string
 ) => {
   try {

@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 
 const saltRounds = 10;
 
-export async function loginUserService(data: {
+export async function registerUserService(data: {
   name: string;
   email: string;
   password: string;

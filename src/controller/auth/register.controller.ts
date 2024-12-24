@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { loginUserService } from "../../services/auth/register.service";
+import { registerUserService } from "../../services/auth/register.service";
 
 export async function registerUserController(
   req: Request,
@@ -7,7 +7,7 @@ export async function registerUserController(
 ): Promise<any> {
   try {
     const data = req.body;
-    const response = await loginUserService(data);
+    const response = await registerUserService(data);
     return res
       .status(200)
       .json({ mesage: "Registration successfull", data: response });

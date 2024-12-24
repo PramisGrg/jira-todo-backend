@@ -24,9 +24,9 @@ export async function userLoginService(data: {
   }
 
   const responseData = {
+    id: existingUser.id,
     name: existingUser.name,
     email: existingUser.email,
-    password: existingUser.password,
   };
 
   const token = generateWebToken(responseData, "15d");
