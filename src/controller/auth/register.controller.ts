@@ -10,7 +10,7 @@ export async function registerUserController(
     const response = await registerUserService(data);
     return res
       .status(200)
-      .json({ mesage: "Registration successfull", data: response });
+      .json({ message: "Registration successfull", data: response });
   } catch (error: any) {
     res.status(400).json({
       message: error.message || "An unexpected error occurred",
