@@ -19,6 +19,7 @@ export async function userLoginService(data: {
     data.password,
     existingUser.password
   );
+  console.log(isPasswordValid);
   if (!isPasswordValid) {
     throw new Error("Wrong Password, please check correctly and enter again");
   }
