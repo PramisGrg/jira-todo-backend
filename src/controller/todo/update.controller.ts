@@ -17,7 +17,8 @@ export default async function updateTodoController(
       res.status(400).json({
         message: error.message,
       });
+    } else {
+      res.status(400).json({ message: "unexpected error occurred" });
     }
-    res.status(400).json({ message: "unexpected error occured" });
   }
 }
