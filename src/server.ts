@@ -9,14 +9,21 @@ const app = express();
 const corsOptions = {
   origin: [
     "http://localhost:5173",
-    "https://drag-and-drop-todo-app.vercel.app/",
+    "https://drag-and-drop-todo-app.vercel.app",
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
   optionsSuccessStatus: 200,
+  exposedHeaders: ["set-cookie"],
+  preflightContinue: false,
+  maxAge: 86400,
 };
+
 app.use(cors(corsOptions));
+
+app.options("*", cors(corsOptions));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(mainRouter);
