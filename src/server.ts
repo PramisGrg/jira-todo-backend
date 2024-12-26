@@ -9,7 +9,7 @@ const app = express();
 const corsOptions = {
   origin: [
     "http://localhost:5173",
-    "https://drag-and-drop-todo-app.vercel.app",
+    "https://todo-app-drag-and-drop-gilt.vercel.app",
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
