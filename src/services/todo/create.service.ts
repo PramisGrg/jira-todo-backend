@@ -1,4 +1,4 @@
-import prisma from "../../../config/db.config";
+import prisma from "../../config/db.config";
 
 export async function createTodoService(userId: string, addTodo: string) {
   const newTodo = await prisma.todo.create({

@@ -1,4 +1,4 @@
-import prisma from "../../../config/db.config";
+import prisma from "../../config/db.config";
 import { TodoStatus } from "@prisma/client";
 
 export default async function updateTodoService(
